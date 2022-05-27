@@ -81,7 +81,9 @@ footer {
       grid-template-columns: 1fr;
   -ms-grid-rows: 90px calc(100vh - 90px - 25px) 25px;
       grid-template-rows: 90px calc(100vh - 90px - 25px) 25px;
-      grid-template-areas: "uno" "dos" "tres";
+      grid-template-areas: "uno"
+ "dos"
+ "tres";
 }
 
 #main__index {
@@ -154,7 +156,9 @@ footer {
       grid-template-columns: 1fr;
   -ms-grid-rows: 90px 100% 25px;
       grid-template-rows: 90px 100% 25px;
-      grid-template-areas: "uno" "dos" "tres";
+      grid-template-areas: "uno"
+ "dos"
+ "tres";
 }
 
 #main__portfolio {
@@ -369,7 +373,7 @@ form input:last-child {
 }
 
 /*IMPORTACIÓN TOTAL DE LOS MEDIA QUERIES*/
-@media screen and (max-width: 958px) and (min-width: 846px) {
+@media screen and (max-width: 970px) and (min-width: 846px) {
   .card {
     width: 90%;
   }
