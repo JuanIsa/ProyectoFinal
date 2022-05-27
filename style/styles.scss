@@ -1,0 +1,320 @@
+/*---------------------------------------------------------------------------------------*/
+/*-----------------------------------------Generales-------------------------------------*/
+/*---------------------------------------------------------------------------------------*/
+* {
+    margin     : 0;
+    padding    : 0;
+    box-sizing : border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Creación de variables*/
+$celesteSuave : rgb(82, 181, 187);
+$celesteFuerte: rgb(11, 82, 100);
+
+
+@font-face {
+    font-family: Texto;
+    src        : url(../fonts/AmaticSC-Bold.ttf);
+}
+
+#botonHamburguesa,
+#divIndexMobile,
+#logoMobile {
+    display: none;
+}
+
+/*-------------------------------------------Header-------------------------------------------*/
+header {
+    grid-area       : uno;
+    background-color: $celesteSuave;
+    display         : flex;
+    justify-content : center;
+    gap             : 20px;
+}
+
+/*Personalización de Bootstrap*/
+.nav-item {
+    display    : flex;
+    align-items: center;
+}
+
+.nav-link {
+    font-size  : 2.8rem;
+    color      : white;
+    font-family: Texto, Arial, Helvetica, sans-serif;
+    &:hover{
+        color:$celesteFuerte;
+    }
+}
+
+/*Fin-Personalización de Bootstrap*/
+
+/*-------------------------------------------Footer-------------------------------------------*/
+
+footer {
+    grid-area       : tres;
+    position        : fixed;
+    bottom          : 0;
+    text-align      : center;
+    background-color: darkgrey;
+    width           : 100%;
+    border          : 1px solid $celesteFuerte;
+}
+
+
+/*---------------------------------------------------------------------------------------*/
+/*-----------------------------------------INDEX-----------------------------------------*/
+/*---------------------------------------------------------------------------------------*/
+
+#body__index {
+    display              : grid;
+    grid-template-columns: 1fr;
+    grid-template-rows   : 90px calc(100vh - 90px - 25px) 25px;
+    grid-template-areas  :
+        "uno"
+        "dos"
+        "tres";
+}
+
+#main__index {
+    grid-area: dos;
+}
+
+/*Personalización de Bootstrap*/
+
+/*Inclusión de mixin*/
+@mixin slide {
+    max-height: calc(100vh - 90px - 25px);
+    min-height: calc(100vh - 90px - 25px);
+    object-fit:cover;
+}
+
+.carousel-item,
+.carousel-item img,
+.carousel-item .active,
+.carousel-item .active img {
+    @include slide;
+}
+
+/*Fin-Personalización de Bootstrap*/
+
+.socialMedia__container {
+    position      : absolute;
+    top           : 20vh;
+    right         : 10px;
+    display       : flex;
+    flex-direction: column;
+    z-index       : 2;
+    gap           : 20px;
+}
+
+.iconos {
+    background-position: center;
+    background-repeat  : no-repeat;
+    background-size    : cover;
+    display            : block;
+    width              : 40px;
+    height             : 40px;
+    &:hover{
+        background-color: $celesteFuerte;
+    }
+}
+
+#icon__whatsapp {
+    background-image: url(../img/whatsapp.png);
+}
+
+#icon__facebook {
+    background-image: url(../img/facebook.png);
+}
+
+#icon__instagram {
+    background-image: url(../img/instagram.png);
+}
+
+/*---------------------------------------------------------------------------------------*/
+/*--------------------------------------PORFOLIO-----------------------------------------*/
+/*---------------------------------------------------------------------------------------*/
+.body__portfolio {
+    background           : darkgray;
+    display              : grid;
+    grid-template-columns: 1fr;
+    grid-template-rows   : 90px 100% 25px;
+    grid-template-areas  :
+        "uno"
+        "dos"
+        "tres";
+}
+
+#main__portfolio {
+    grid-area: dos;
+}
+
+/*Personalización de Bootstrap*/
+.container {
+    width     : 70%;
+    margin-top: 10px;
+}
+
+.row>* {
+    margin       : 0 !important;
+    padding-right: 0 !important;
+    padding-left : 0 !important;
+}
+/*No se me ocurria nada en que usar el map relacionado con mi proyecto, asi que bueno le mandé a unos bordes sutiles que vayan desapareciendo como para que se vea que se entendió.*/
+
+/*Creación de lista*/
+$objeto1:(
+1:rgba(82, 181, 187,1),
+2:rgba(82, 181, 187, 0.833),
+3:rgba(82, 181, 187, 0.750),
+4:rgba(82, 181, 187, 0.666),
+5:rgba(82, 181, 187, 0.583),
+6:rgba(82, 181, 187, 0.500),
+7:rgba(82, 181, 187, 0.416),
+8:rgba(82, 181, 187, 0.333),
+9:rgba(82, 181, 187, 0.250),
+10:rgba(82, 181, 187, 0.166),
+11:rgba(82, 181, 187, 0.083),
+12:rgba(82, 181, 187, 0));
+/*Inclusión de for each*/
+
+@each $key,$value in $objeto1 {
+    .foto#{$key} {
+        border: 1px solid $value;
+    }
+}
+
+
+ 
+/*Nesting o anidación*/
+.container {
+    img {
+        border-radius: 20px;
+        width        : 100%;
+        padding      : 3px;
+        /*Uso de pseudoclases anidadas*/
+        &:hover {
+            border: 7px solid darkgray;
+        }
+    }
+}
+
+/*Fin-Personalización de Bootstrap*/
+
+/*---------------------------------------------------------------------------------------*/
+/*--------------------------------------ESTUDIO------------------------------------------*/
+/*---------------------------------------------------------------------------------------*/
+
+/*Herencia de clases*/
+.body__estudio {
+    @extend.body__portfolio;
+}
+
+#main__estudio {
+    grid-area      : dos;
+    display        : flex;
+    justify-content: center;
+}
+
+#container__esutudio{
+    display: flex;
+    width: 70%;
+    height:fit-content;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    border: 2px solid $celesteFuerte;
+    border-radius: 15px;
+    justify-content: center;
+}
+#texto__estudio{
+    padding: 2%;
+}
+#imagen__estudio {
+    margin-top      : 20px;
+    height          : 600px;
+    width           : 96%;
+    background-image: url(../img/horizontalC.jpg);
+    background-size : cover;
+    border-radius: 15px;
+    margin-bottom: 2%;
+}
+
+/*FIN-Personalización de Bootstrap*/
+
+/*---------------------------------------------------------------------------------------*/
+/*------------------------------------SERVICIOS------------------------------------------*/
+/*---------------------------------------------------------------------------------------*/
+/*Herencia de clases*/
+.body__servicios {
+    @extend.body__portfolio
+}
+
+#contaierServicios {
+    margin         : auto;
+    margin-top     : 10px;
+    width          : 70%;
+    height         : fit-content;
+    display        : flex;
+    flex-wrap      : wrap;
+    flex-direction : row;
+    justify-content: space-evenly;
+    align-content  : space-evenly;
+    border-radius  : 20px;
+    border         : 2px solid $celesteFuerte;
+}
+
+/*Personalización de Bootstrap*/
+.card {
+    width           : 47%;
+    margin          : 10px;
+    background-color: darkgray;
+}
+
+/*FIN -Personalización de Bootstrap*/
+
+
+/*---------------------------------------------------------------------------------------*/
+/*------------------------------------CONTACTO------------------------------------------*/
+/*---------------------------------------------------------------------------------------*/
+.container__contacto {
+    width           : 100vw;
+    height          : 500px;
+    background-color: darkgray;
+    position        : absolute;
+    bottom          : 0;
+    display         : flex;
+    justify-content : center;
+    padding-top     : 10px;
+}
+
+.div__contacto {
+    margin: 0 10px;
+}
+
+
+
+/*--------------------------------------------------------*/
+form {
+    margin: 0 0px;
+
+    input {
+        font-size: 1rem;
+        padding  : 0;
+    }
+
+    textarea {
+        font-size: 1rem;
+        resize   : none;
+    }
+
+    input:last-child {
+        margin-top   : 10px;
+        padding      : 3px;
+        border-radius: 10px;
+    }
+}
+
+/*IMPORTACIÓN TOTAL DE LOS MEDIA QUERIES*/
+@import "media.scss";

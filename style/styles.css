@@ -1,0 +1,529 @@
+@charset "UTF-8";
+/*---------------------------------------------------------------------------------------*/
+/*-----------------------------------------Generales-------------------------------------*/
+/*---------------------------------------------------------------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Creación de variables*/
+@font-face {
+  font-family: Texto;
+  src: url(../fonts/AmaticSC-Bold.ttf);
+}
+
+#botonHamburguesa,
+#divIndexMobile,
+#logoMobile {
+  display: none;
+}
+
+/*-------------------------------------------Header-------------------------------------------*/
+header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: uno;
+  background-color: #52b5bb;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+}
+
+/*Personalización de Bootstrap*/
+.nav-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav-link {
+  font-size: 2.8rem;
+  color: white;
+  font-family: Texto, Arial, Helvetica, sans-serif;
+}
+
+.nav-link:hover {
+  color: #0b5264;
+}
+
+/*Fin-Personalización de Bootstrap*/
+/*-------------------------------------------Footer-------------------------------------------*/
+footer {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: tres;
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  background-color: darkgrey;
+  width: 100%;
+  border: 1px solid #0b5264;
+}
+
+/*---------------------------------------------------------------------------------------*/
+/*-----------------------------------------INDEX-----------------------------------------*/
+/*---------------------------------------------------------------------------------------*/
+#body__index {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 90px calc(100vh - 90px - 25px) 25px;
+      grid-template-rows: 90px calc(100vh - 90px - 25px) 25px;
+      grid-template-areas: "uno" "dos" "tres";
+}
+
+#main__index {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: dos;
+}
+
+/*Personalización de Bootstrap*/
+/*Inclusión de mixin*/
+.carousel-item,
+.carousel-item img,
+.carousel-item .active,
+.carousel-item .active img {
+  max-height: calc(100vh - 90px - 25px);
+  min-height: calc(100vh - 90px - 25px);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/*Fin-Personalización de Bootstrap*/
+.socialMedia__container {
+  position: absolute;
+  top: 20vh;
+  right: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  z-index: 2;
+  gap: 20px;
+}
+
+.iconos {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  width: 40px;
+  height: 40px;
+}
+
+.iconos:hover {
+  background-color: #0b5264;
+}
+
+#icon__whatsapp {
+  background-image: url(../img/whatsapp.png);
+}
+
+#icon__facebook {
+  background-image: url(../img/facebook.png);
+}
+
+#icon__instagram {
+  background-image: url(../img/instagram.png);
+}
+
+/*---------------------------------------------------------------------------------------*/
+/*--------------------------------------PORFOLIO-----------------------------------------*/
+/*---------------------------------------------------------------------------------------*/
+.body__portfolio, .body__estudio, .body__servicios {
+  background: darkgray;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 90px 100% 25px;
+      grid-template-rows: 90px 100% 25px;
+      grid-template-areas: "uno" "dos" "tres";
+}
+
+#main__portfolio {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: dos;
+}
+
+/*Personalización de Bootstrap*/
+.container {
+  width: 70%;
+  margin-top: 10px;
+}
+
+.row > * {
+  margin: 0 !important;
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+
+/*No se me ocurria nada en que usar el map relacionado con mi proyecto, asi que bueno le mandé a unos bordes sutiles que vayan desapareciendo como para que se vea que se entendió.*/
+/*Creación de lista*/
+/*Inclusión de for each*/
+.foto1 {
+  border: 1px solid #52b5bb;
+}
+
+.foto2 {
+  border: 1px solid rgba(82, 181, 187, 0.833);
+}
+
+.foto3 {
+  border: 1px solid rgba(82, 181, 187, 0.75);
+}
+
+.foto4 {
+  border: 1px solid rgba(82, 181, 187, 0.666);
+}
+
+.foto5 {
+  border: 1px solid rgba(82, 181, 187, 0.583);
+}
+
+.foto6 {
+  border: 1px solid rgba(82, 181, 187, 0.5);
+}
+
+.foto7 {
+  border: 1px solid rgba(82, 181, 187, 0.416);
+}
+
+.foto8 {
+  border: 1px solid rgba(82, 181, 187, 0.333);
+}
+
+.foto9 {
+  border: 1px solid rgba(82, 181, 187, 0.25);
+}
+
+.foto10 {
+  border: 1px solid rgba(82, 181, 187, 0.166);
+}
+
+.foto11 {
+  border: 1px solid rgba(82, 181, 187, 0.083);
+}
+
+.foto12 {
+  border: 1px solid rgba(82, 181, 187, 0);
+}
+
+/*Nesting o anidación*/
+.container img {
+  border-radius: 20px;
+  width: 100%;
+  padding: 3px;
+  /*Uso de pseudoclases anidadas*/
+}
+
+.container img:hover {
+  border: 7px solid darkgray;
+}
+
+/*Fin-Personalización de Bootstrap*/
+/*---------------------------------------------------------------------------------------*/
+/*--------------------------------------ESTUDIO------------------------------------------*/
+/*---------------------------------------------------------------------------------------*/
+/*Herencia de clases*/
+#main__estudio {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: dos;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#container__esutudio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 70%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-top: 10px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  border: 2px solid #0b5264;
+  border-radius: 15px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#texto__estudio {
+  padding: 2%;
+}
+
+#imagen__estudio {
+  margin-top: 20px;
+  height: 600px;
+  width: 96%;
+  background-image: url(../img/horizontalC.jpg);
+  background-size: cover;
+  border-radius: 15px;
+  margin-bottom: 2%;
+}
+
+/*FIN-Personalización de Bootstrap*/
+/*---------------------------------------------------------------------------------------*/
+/*------------------------------------SERVICIOS------------------------------------------*/
+/*---------------------------------------------------------------------------------------*/
+/*Herencia de clases*/
+#contaierServicios {
+  margin: auto;
+  margin-top: 10px;
+  width: 70%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-line-pack: space-evenly;
+      align-content: space-evenly;
+  border-radius: 20px;
+  border: 2px solid #0b5264;
+}
+
+/*Personalización de Bootstrap*/
+.card {
+  width: 47%;
+  margin: 10px;
+  background-color: darkgray;
+}
+
+/*FIN -Personalización de Bootstrap*/
+/*---------------------------------------------------------------------------------------*/
+/*------------------------------------CONTACTO------------------------------------------*/
+/*---------------------------------------------------------------------------------------*/
+.container__contacto {
+  width: 100vw;
+  height: 500px;
+  background-color: darkgray;
+  position: absolute;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 10px;
+}
+
+.div__contacto {
+  margin: 0 10px;
+}
+
+/*--------------------------------------------------------*/
+form {
+  margin: 0 0px;
+}
+
+form input {
+  font-size: 1rem;
+  padding: 0;
+}
+
+form textarea {
+  font-size: 1rem;
+  resize: none;
+}
+
+form input:last-child {
+  margin-top: 10px;
+  padding: 3px;
+  border-radius: 10px;
+}
+
+/*IMPORTACIÓN TOTAL DE LOS MEDIA QUERIES*/
+@media screen and (max-width: 958px) and (min-width: 846px) {
+  .card {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 845px) {
+  /*---------Generales-----------*/
+  #botonHamburguesa {
+    display: block;
+    height: 40px;
+    width: 40px;
+    position: fixed;
+    top: 40px;
+    right: 40px;
+    background-color: #0b5264;
+    background-image: url(../img/menu.png);
+    background-position: center;
+    background-size: cover;
+    z-index: 5;
+    border-radius: 7px;
+  }
+  #logoMobile {
+    display: block;
+    background-image: url(../img/Flavicon.png);
+    background-position: center;
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    top: 40px;
+    left: 40px;
+    z-index: 3;
+    border-radius: 7px;
+  }
+  .offcanvas-header {
+    background-color: #0b5264;
+  }
+  .offcanvas-body {
+    background-color: #0b5264;
+  }
+  #menu__desplegable {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  #menu__desplegable a {
+    color: white;
+  }
+  .offcanvas-header .btn-close {
+    background-color: white;
+  }
+  header {
+    display: none;
+  }
+  /*--------------Index-----------*/
+  #fondoIndexMobile {
+    width: 100vw;
+    height: calc(100vh - 25px);
+    background-image: url(../img/Horizontal4.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  #carouselExampleIndicators {
+    display: none;
+  }
+  .socialMedia__container {
+    display: none;
+  }
+  #divIndexMobile {
+    display: block;
+    height: 60vh;
+    width: 100vw;
+    background-color: darkgray;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+  }
+  #divIndexMobile h3 {
+    font-size: 2rem;
+  }
+  /*--------------Porfolio--------------*/
+  .body__portfolio, .body__estudio, .body__servicios {
+    display: block;
+  }
+  .container {
+    width: 90%;
+    margin-top: 100px;
+    margin-bottom: 35px;
+  }
+  /*-------------Estudio----------------*/
+  .body__estudio {
+    display: block;
+  }
+  #container__esutudio {
+    margin-top: 100px;
+    margin-bottom: 35px;
+    width: 90%;
+  }
+  /*-----------------Servicios-----------*/
+  .body__servicios {
+    display: block;
+  }
+  #contaierServicios {
+    margin-top: 100px;
+    width: 90%;
+    margin-bottom: 35px;
+  }
+  .card {
+    width: 90%;
+  }
+  /*---------------Contacto---------------*/
+  #carrouselContacto {
+    display: none;
+  }
+  .container__contacto {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  #derecha {
+    display: none;
+  }
+  .div__contacto {
+    width: 90%;
+    margin: auto;
+  }
+  .div__contacto h3 {
+    font-size: 1rem;
+    padding-top: 5px;
+  }
+  .div__contacto p:nth-child(2) {
+    padding: 5px;
+    font-size: 1rem;
+  }
+  .div__contacto p:last-child {
+    padding: 5px;
+    font-size: 1rem;
+  }
+  form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

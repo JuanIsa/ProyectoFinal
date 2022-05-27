@@ -1,0 +1,190 @@
+@media screen and (max-width: 958px) and (min-width:846px) {
+  .card {
+    width: 90%;
+  }
+}
+
+
+@media screen and (max-width: 845px) {
+
+  /*---------Generales-----------*/
+  #botonHamburguesa {
+    display            : block;
+    height             : 40px;
+    width              : 40px;
+    position           : fixed;
+    top                : 40px;
+    right              : 40px;
+    background-color   : #0b5264;
+    background-image   : url(../img/menu.png);
+    background-position: center;
+    background-size    : cover;
+    z-index            : 5;
+    border-radius      : 7px;
+  }
+
+  #logoMobile {
+    display            : block;
+    background-image   : url(../img/Flavicon.png);
+    background-position: center;
+    background-size    : cover;
+    width              : 40px;
+    height             : 40px;
+    position           : fixed;
+    top                : 40px;
+    left               : 40px;
+    z-index            : 3;
+    border-radius      : 7px;
+  }
+
+  .offcanvas-header {
+    background-color: #0b5264;
+  }
+
+  .offcanvas-body {
+    background-color: #0b5264;
+  }
+
+  #menu__desplegable {
+    display              : -webkit-box;
+    display              : -ms-flexbox;
+    display              : flex;
+    -webkit-box-orient   : vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction   : column;
+    flex-direction       : column;
+  }
+
+  #menu__desplegable a {
+    color: white;
+  }
+
+  .offcanvas-header .btn-close {
+    background-color: white;
+  }
+
+  header {
+    display: none;
+  }
+
+  /*--------------Index-----------*/
+  #fondoIndexMobile {
+    width              : 100vw;
+    height             : calc(100vh - 25px);
+    background-image   : url(../img/Horizontal4.jpg);
+    background-size    : cover;
+    background-position: center;
+  }
+
+  #carouselExampleIndicators {
+    display: none;
+  }
+
+  .socialMedia__container {
+    display: none;
+  }
+
+  #divIndexMobile {
+    display         : block;
+    height          : 60vh;
+    width           : 100vw;
+    background-color: darkgray;
+    position        : absolute;
+    bottom          : 0;
+    text-align      : center;
+  }
+
+  #divIndexMobile {
+    h3 {
+      font-size: 2rem;
+    }
+  }
+
+  /*--------------Porfolio--------------*/
+  .body__portfolio {
+    display: block;
+  }
+
+  .container {
+    width        : 90%;
+    margin-top   : 100px;
+    margin-bottom: 35px;
+  }
+
+  /*-------------Estudio----------------*/
+  .body__estudio {
+    display: block;
+  }
+
+  #container__esutudio {
+    margin-top   : 100px;
+    margin-bottom: 35px;
+    width        : 90%;
+  }
+
+  /*-----------------Servicios-----------*/
+  .body__servicios {
+    display: block;
+  }
+
+  #contaierServicios {
+    margin-top   : 100px;
+    width        : 90%;
+    margin-bottom: 35px;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  /*---------------Contacto---------------*/
+  #carrouselContacto {
+    display: none;
+  }
+
+  .container__contacto {
+    height               : 100vh;
+    position             : fixed;
+    top                  : 0;
+    -webkit-box-orient   : vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction   : column;
+    flex-direction       : column;
+  }
+
+  #derecha {
+    display: none;
+  }
+
+  .div__contacto {
+    width : 90%;
+    margin: auto;
+  }
+
+  .div__contacto h3 {
+    font-size  : 1rem;
+    padding-top: 5px;
+  }
+
+  .div__contacto p:nth-child(2) {
+    padding  : 5px;
+    font-size: 1rem;
+  }
+
+  .div__contacto p:last-child {
+    padding  : 5px;
+    font-size: 1rem;
+  }
+
+  form {
+    display              : -webkit-box;
+    display              : -ms-flexbox;
+    display              : flex;
+    -webkit-box-orient   : vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction   : column;
+    flex-direction       : column;
+  }
+}
+
+/*# sourceMappingURL=medias.css.map */
